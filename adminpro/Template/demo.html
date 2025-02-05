@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include 'bootstrap.html'%}
+</head>
+<body>
+    
+    {% if data%}
+    <h1 class="text-center">Data is Found</h1>
+    <div class="offset-2 md-2">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        </thead>
+        <tbody>
+            {%for i in data%}
+            <tr>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}}</td>
+            </tr>
+            {%endfor%}
+                </tbody>
+        </table>
+        {%else%}
+        <h1 class="text-center" >Data Not Found</h1>
+        {%endif%}
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include 'bootstrap.html'%}
+    <style>
+    .bo{
+        background-color: black;
+    }
+    .io{
+        background-color:rgb(42, 41, 41);
+        border-radius: 50%;
+        padding:20px;
+        color:rgb(180, 179, 179);
+        margin: 10px;
+    }
+    hr{
+        background-color:white;
+    }
+    .ioc{
+        color:#959ead;
+    }
+    h6,h2,p,.c{
+        color:#959ead; 
+    }
+</style>
+</head>
+<body>
+    {% include 'navabar.html'%}
+    {% block b1%}
+    {% endblock%}
+</body>
+</html>

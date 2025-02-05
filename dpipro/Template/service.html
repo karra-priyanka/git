@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block b1%}
+    {%if data%}
+    <h1>Our Courses</h1>
+    <div class="container">
+        <div class="row">
+        <table class="table table-bordered">
+            <thead class="bg-success text-white">
+                <tr>
+                    <th>course id</th>
+                    <th>course name</th>
+                    <th>course fee</th>
+                    <th>course startdate</th>
+                    <th>course enddate</th>
+                    <th>course time</th>
+                    <th>institute name</th>
+                    <th>institute location</th>
+                    <th>trainer name</th></tr>
+            </thead>
+                {%for i in data%}
+                <tbody class="bg-light">
+                    <tr>
+                        <td>{{i.course_id}}</td>
+                        <td>{{i.course_name}}</td>
+                        <td>{{i.course_fee}}</td>
+                        <td>{{i.course_startdate}}</td>
+                        <td>{{i.course_enddate}}</td>
+                        <td>{{i.course_time}}</td>
+                        <td>{{i.institute_name}}</td>
+                        <td>{{i.institute_location}}</td>
+                        <td>{{i.trainer_name}}</td>
+                    </tr>
+                </tbody>
+                {%endfor%}
+        </table>
+    </div>
+    </div>
+    {%else%}
+    <h1>Data is not found</h1>
+    {%endif%}
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {%csrf_token%}
+        first_name:<input type="text" name="f_name" value="" placeholder="Enter the first name" class="form-control">
+        last_name:<input type="text" name="l_name" value="" placeholder="Enter the last name" class="form-control">
+        Email:<input type="email" name="email" value="" placeholder="Enter the Email" class="form-control">
+        Address:<input type="text" name="address" value="" placeholder="Enter the address" class="form-control">
+        <div class="text-center">
+            <button type="submit">submit</button>
+            <input type="reset" value="Clear" class="btn btn-danger"/>
+            </div>
+            <div class="text-center mt-2">
+                <a href="{%url 'homepage'%}" class="btn btn-info">Back</a>
+            </div>
+    </form>
+</body>
+</html>

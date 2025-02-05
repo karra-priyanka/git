@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <title>Contact Form</title>
+    </head>
+    <style media="screen">
+        h1{
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 10px;
+        }
+        form{
+            box-shadow: 0px 0px 10px red;
+        }
+        input[name]{
+            padding: 1px;
+        }
+    </style>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Please Enter Your Details</h1>
+                    <form method="POST">
+                        {%csrf_token%} 
+                        fname: <input type="text"name="fname"value=""placeholder="Enter the your first name" class="form-control" />
+                        lname:<input type="text"name="lname"value=""placeholder="Enter the your last name" class="form-control"/>
+                        Email:<input type="email"name="email"value=""placeholder="Enter the your email" class="form-control"/>
+                        phno:<input type="number"name="num"value=""placeholder="Enter the number" class="form-control"/>
+                        iname:<input type="text" name="iname" value="" placeholder="Enter the institute" class="form-control"/>
+                        Location:<input type="text" name="address" value="" placeholder="Enter the address" class="form-control"/>
+
+                        <div class="text-center">
+                            <input type="submit" value="Submit" class="btn btn-success"/>
+                            <input type="reset" value="Clear" class="btn btn-danger"/>
+                        </div>
+                    </from>
+                    </div>
+                    <div class="col-md-8">
+                        <h1 class="text-center">Our Database Data</h1>
+                        <table class="table table-bordered">
+                            <thread>
+                                <tr> 
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Number</th>
+                                    <th>Institute</th>
+                                    <th>Address</th>
+                                </tr>
+                            </thread>
+                            <tbody>
+                                {%for i in data %}
+                                <tr>
+                                    <td>{{i.first_name}}</td>
+                                    <td>{{i.last_name}}</td>
+                                    <td>{{i.email}}</td>
+                                    <td>{{i.number}}</td>
+                                    <td>{{i.iname}}</td>
+                                    <td>{{i.address}}</td>
+                                </tr>
+                                {% endfor%}
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+            </div>
+        
+    </body>
+</html>

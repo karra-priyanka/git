@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+
+}
+
+.shadow-wrap {
+    border-radius: 10px;
+    background-color: rgb(220, 224, 227);
+    padding : 20px;
+}
+.form-wrap  {
+    
+    background-color: rgb(248, 250, 252);
+    padding: 80px;
+    border-radius: 10px;
+    
+} 
+.form-wrap form {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+    
+}
+.form-wrap label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 30px;
+}
+
+.form-wrap form input {
+    
+    padding: 2px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(124, 123, 123);
+    background-color: #fff;
+    color: rgb(16, 16, 16);
+}
+
+.form-wrap button {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+.button {
+    text-align: center;
+}
+
+.form-wrap button:hover {
+    background-color: aqua;
+    color: black;
+}
+a {
+    text-decoration: none;
+  
+}
+.a {
+    text-align: center;
+}
+a:hover {
+    text-decoration: underline;
+
+}
